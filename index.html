@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuesioner KNG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .line {
+            background-color: rgb(41, 128, 241);
+            height: 2px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="">
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="p-2 bg-white mt-3 rounded-lg">
+            <div class="p-2 mb-3">
+                <div class="text-center">
+                    <h1 class="font-bold text-2xl">Kuesioner</h1>
+                    <span class=" text-xl">Pengguna/user website Klampid New Generation</span>
+                </div>
+            </div>
+            <div class="line mb-3"></div>
+            <div class="w-full">
+                <form id="kuesionerForm">
+                    <div id="konten1" class="max-w-4xl mx-auto">
+                        <div class="mb-4 w-full mx-auto ">
+                            <label class="block text-gray-700 font-bold mb-2" for="email">
+                                Nama Lengkap
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none "
+                                type="text" name="nama" placeholder="Nama Lengkap" required>
+                        </div>
+                        <div class="mb-4 w-full mx-auto ">
+                            <label class="block text-gray-700 font-bold mb-2" for="email">
+                                Email
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none "
+                                type="email" name="email" placeholder="exsempel@gmail.com" required>
+                        </div>
+                        <div class="mb-4 w-full mx-auto ">
+                            <label class="block text-gray-700 font-bold mb-2" for="email">
+                                No. Whatsapp (Aktif)
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none "
+                                type="number" name="no_whatsapp" placeholder="08XXXXXXXX" required>
+                        </div>
+                        <div class="mb-4 w-full mx-auto ">
+                            <label class="block text-gray-700 font-bold mb-2" for="email">
+                                Usia
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none "
+                                type="number" name="usia" placeholder="XX">
+                        </div>
+                        <div class="mb-4 w-full mx-auto ">
+                            <label class="block text-gray-700 font-bold mb-2" for="email" required>
+                                Jenis Kelamin
+                            </label>
+                            <select
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none "
+                                name="jenis_kelamin" id="" required>
+                                <option disabled>=== Pilih ====</option>
+                                <option value="Laki-Laki">Laki - Laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                        <div class="w-full mx-auto max-w-2xl">
+                            <h4 class="block text-gray-700 font-bold mb-2">Pekerjaan</h4>
+                            <div>
+                                <label
+                                    class="flex bg-gray-100 text-gray-700 rounded-md px-3 py-2 my-3 hover:bg-indigo-300 cursor-pointer">
+                                    <input type="radio" name="pekerjaan" value="Karyawan" required>
+                                    <span class="pl-2">Karyawan</span>
+                                </label>
+
+                                <label
+                                    class="flex bg-gray-100 text-gray-700 rounded-md px-3 py-2 my-3 hover:bg-indigo-300 cursor-pointer">
+                                    <input type="radio" name="pekerjaan" value="Wirausaha">
+                                    <span class="pl-2">Wirausaha</span>
+                                </label>
+
+                                <label
+                                    class="flex bg-gray-100 text-gray-700 rounded-md px-3 py-2 my-3 hover:bg-indigo-300 cursor-pointer">
+                                    <input type="radio" name="pekerjaan" value="Mahasiswa">
+                                    <span class="pl-2">Mahasiswa</span>
+                                </label>
+
+                                <label
+                                    class="flex bg-gray-100 text-gray-700 rounded-md px-3 py-2 my-3 hover:bg-indigo-300 cursor-pointer">
+                                    <input type="radio" name="pekerjaan" value="Pelajar">
+                                    <span class="pl-2">Pelajar</span>
+                                </label>
+
+                                <label
+                                    class="flex bg-gray-100 text-gray-700 rounded-md px-3 py-2 my-3 hover:bg-indigo-300 cursor-pointer">
+                                    <input type="radio" name="pekerjaan" value="Lainnya">
+                                    <span class="pl-2">Lainnya</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 w-full mt-4 mx-auto rounded">
+                            <label class=" font-bold text-gray-700">
+                                Apakah Anda berdomisili di kota Surabaya?
+                            </label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="domisili" value="Ya" required>
+                                    <span>Ya</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="domisili" value="Tidak">
+                                    <span>Tidak</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Konten 1 -->
+                    <div id="konten2" class="hidden max-w-4xl mx-auto">
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h1 class="text-center font-bold text-gray-700 text-xl">Variabel Performance</h1>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h1 class="block mb-2 font-bold text-gray-700">Petunjuk Pengisian</h1>
+                            <span class="block mb-2 font-medium text-gray-700">Silahkan isi kuisioner dibawah ini dengan
+                                pilihan jawaban berikut dengan skala 1 - 5
+                            </span>
+                            <ol>
+                                <li>1. Sangat Tidak Setuju (STS)</li>
+                                <li>2. Tidak Setuju (TS)</li>
+                                <li>3. Cukup Setuju (CS)</li>
+                                <li>4. Setuju (S)</li>
+                                <li>5. Sangat Setuju (SS)</li>
+                            </ol>
+                        </div>
+
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">1. Website mudah di akses pada setiap
+                                halamannya?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_1" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_1" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_1" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_1" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_1" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">2. Website memberikan waktu loading
+                                yang cepat saat di akses?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_2" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_2" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_2" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_2" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_2" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">3. Website memenuhi kebutuhan
+                                pengguna?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_3" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_3" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_3" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_3" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_3" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">4. Website menyajikan menu dalam
+                                format yang sesuai?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_4" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_4" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_4" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_4" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="perform_soal_4" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Konten 2 -->
+                    <div id="konten3" class="hidden max-w-4xl mx-auto">
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h1 class="text-center font-bold text-gray-700 text-xl">Variabel Information</h1>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h1 class="block mb-2 font-bold text-gray-700">Petunjuk Pengisian</h1>
+                            <span class="block mb-2 font-medium text-gray-700">Silahkan isi kuisioner dibawah ini dengan
+                                pilihan jawaban berikut dengan skala 1 - 5
+                            </span>
+                            <ol>
+                                <li>1. Sangat Tidak Setuju (STS)</li>
+                                <li>2. Tidak Setuju (TS)</li>
+                                <li>3. Cukup Setuju (CS)</li>
+                                <li>4. Setuju (S)</li>
+                                <li>5. Sangat Setuju (SS)</li>
+                            </ol>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">1. Website menyediakan informasi yang
+                                tepat dan akurat?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_1" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_1" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_1" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_1" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_1" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">2. Tepat dalam penyusunan yang tepat
+                                dan akurat?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_2" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_2" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_2" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_2" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_2" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">3. Informasi yang disajikan sesuai
+                                dengan kebutuhan pengguna ?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_3" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_3" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_3" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_3" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_3" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">4. Website menyediakan informasi
+                                terkini (update)?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_4" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_4" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_4" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_4" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="infor_soal_4" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Konten 3 -->
+                    <div id="konten4" class="hidden max-w-4xl mx-auto">
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h1 class="text-center font-bold text-gray-700 text-xl">Variabel Economic</h1>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h1 class="block mb-2 font-bold text-gray-700">Petunjuk Pengisian</h1>
+                            <span class="block mb-2 font-medium text-gray-700">Silahkan isi kuisioner dibawah ini dengan
+                                pilihan jawaban berikut dengan skala 1 - 5
+                            </span>
+                            <ol>
+                                <li>1. Sangat Tidak Setuju (STS)</li>
+                                <li>2. Tidak Setuju (TS)</li>
+                                <li>3. Cukup Setuju (CS)</li>
+                                <li>4. Setuju (S)</li>
+                                <li>5. Sangat Setuju (SS)</li>
+                            </ol>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">1. Alamat website mudah ditemukan
+                                disetiap situs pencarian seperti (chrome,mozilla ,dll)?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_1" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_1" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_1" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_1" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_1" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">2. Website dapat meringankan pengguna
+                                dari segi waktu dan biaya?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_2" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_2" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_2" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_2" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_2" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">3. Dengan mudah memberikan kritik pada
+                                pengelola website?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_3" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_3" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_3" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_3" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="economic_soal_3" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Konten 4 -->
+                    <div id="konten5" class="hidden max-w-4xl mx-auto">
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h1 class="text-center font-bold text-gray-700 text-xl">Variabel Control</h1>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h1 class="block mb-2 font-bold text-gray-700">Petunjuk Pengisian</h1>
+                            <span class="block mb-2 font-medium text-gray-700">Silahkan isi kuisioner dibawah ini dengan
+                                pilihan jawaban berikut dengan skala 1 - 5
+                            </span>
+                            <ol>
+                                <li>1. Sangat Tidak Setuju (STS)</li>
+                                <li>2. Tidak Setuju (TS)</li>
+                                <li>3. Cukup Setuju (CS)</li>
+                                <li>4. Setuju (S)</li>
+                                <li>5. Sangat Setuju (SS)</li>
+                            </ol>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">1. Website menjamin keamanan pada saat
+                                mengakses informasi bagi pengguna?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_1" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_1" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_1" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_1" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_1" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">2. Website memberikan batasan akses
+                                bagi pengguna?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_2" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_2" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_2" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_2" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_2" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">3. Pengendalian informasi tepat dengan
+                                yang diinginkan pengguna?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_3" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_3" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_3" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_3" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="control_soal_3" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Konten 5 -->
+                    <div id="konten6" class="hidden max-w-4xl mx-auto">
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h1 class="text-center font-bold text-gray-700 text-xl">Variabel Efficiency</h1>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h1 class="block mb-2 font-bold text-gray-700">Petunjuk Pengisian</h1>
+                            <span class="block mb-2 font-medium text-gray-700">Silahkan isi kuisioner dibawah ini dengan
+                                pilihan jawaban berikut dengan skala 1 - 5
+                            </span>
+                            <ol>
+                                <li>1. Sangat Tidak Setuju (STS)</li>
+                                <li>2. Tidak Setuju (TS)</li>
+                                <li>3. Cukup Setuju (CS)</li>
+                                <li>4. Setuju (S)</li>
+                                <li>5. Sangat Setuju (SS)</li>
+                            </ol>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">1. Website tidak ada kesulitan pada
+                                saat pertama kali diakses?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_1" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_1" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_1" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_1" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_1" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">2. Desain keseluruhan website mudah
+                                dimengerti?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_2" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_2" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_2" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_2" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_2" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">3. Website memberikan fitur arah yang
+                                jelas sehingga mudah dipahami?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_3" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_3" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_3" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_3" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="eficincy_soal_3" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Konten 6 -->
+                    <div id="konten7" class="hidden max-w-4xl mx-auto">
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h1 class="text-center font-bold text-gray-700 text-xl">Variabel Services</h1>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h1 class="block mb-2 font-bold text-gray-700">Petunjuk Pengisian</h1>
+                            <span class="block mb-2 font-medium text-gray-700">Silahkan isi kuisioner dibawah ini dengan
+                                pilihan jawaban berikut dengan skala 1 - 5
+                            </span>
+                            <ol>
+                                <li>1. Sangat Tidak Setuju (STS)</li>
+                                <li>2. Tidak Setuju (TS)</li>
+                                <li>3. Cukup Setuju (CS)</li>
+                                <li>4. Setuju (S)</li>
+                                <li>5. Sangat Setuju (SS)</li>
+                            </ol>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">1. Website dapat diakses menggunakan
+                                PC/Komputer, handphone atau tablet?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_1" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_1" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_1" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_1" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_1" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">2. Website tidak mengalami error pada
+                                saat di akses?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_2" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_2" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_2" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_2" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_2" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">3. Website memberikan informasi
+                                up-to-date yang beragam jenis?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_3" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_3" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_3" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_3" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="servis_soal_3" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Konten 7 -->
+                    <div id="konten8" class="hidden max-w-4xl mx-auto">
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h1 class="text-center font-bold text-gray-700 text-xl">Variabel Kepuasan Pengguna</h1>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h1 class="block mb-2 font-bold text-gray-700">Petunjuk Pengisian</h1>
+                            <span class="block mb-2 font-medium text-gray-700">Silahkan isi kuisioner dibawah ini dengan
+                                pilihan jawaban berikut dengan skala 1 - 5
+                            </span>
+                            <ol>
+                                <li>1. Sangat Tidak Setuju (STS)</li>
+                                <li>2. Tidak Setuju (TS)</li>
+                                <li>3. Cukup Setuju (CS)</li>
+                                <li>4. Setuju (S)</li>
+                                <li>5. Sangat Setuju (SS)</li>
+                            </ol>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">1. Sistem memberikan respon yang cepat
+                                dan stabil saat digunakan, sehingga saya merasa puas dengan kinerjanya?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_1" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_1" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_1" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_1" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_1" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">2. Informasi yang disajikan oleh
+                                sistem akurat, lengkap, dan mudah dipahami, sehingga membantu saya dalam mengambil
+                                keputusan?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_2" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_2" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_2" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_2" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_2" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">3. Biaya atau sumber daya yang
+                                dikeluarkan untuk menggunakan sistem sebanding dengan manfaat yang saya peroleh?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_3" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_3" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_3" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_3" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_3" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">4. Saya merasa memiliki kontrol yang
+                                cukup dalam mengelola data dan fitur yang tersedia pada system?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_4" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_4" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_4" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_4" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_4" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">5. Sistem membantu saya menyelesaikan
+                                pekerjaan lebih cepat dan mengurangi usaha manual yang diperlukan?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_5" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_5" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_5" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_5" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_5" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white rounded-md mb-4">
+                            <h4 class="block mb-2 font-medium text-gray-700 mb-3">6. Dukungan layanan pengguna yang
+                                diberikan sangat membantu dan cepat dalam menyelesaikan masalah?</h4>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_6" value="STS" required>
+                                    <span>STS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_6" value="TS">
+                                    <span>TS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_6" value="CS">
+                                    <span>CS</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_6" value="S">
+                                    <span>S</span>
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="kepuasan_soal_6" value="SS">
+                                    <span>SS</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-between max-w-sm mx-auto text-white font-bold">
+                        <button type="button" id="btnSebelumnya"
+                            class="bg-gray-400 px-5 py-2 rounded-lg">Sebelumnya</button>
+                        <button type="button" id="btnSelanjutnya"
+                            class="bg-[#1A4244] px-5 py-2 rounded-lg">Selanjutnya</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('input[name="pekerjaan"]').forEach(el => {
+            el.addEventListener('change', () => {
+                console.log('Dipilih:', el.value);
+            });
+        });
+    </script>
+    <script type="module">
+        // Import Firebase SDKs
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBU2OQ4TZKa-mn9NNhstfQ3HOwE79Wgl_U",
+            authDomain: "data-kuesioner-kng.firebaseapp.com",
+            projectId: "data-kuesioner-kng",
+            storageBucket: "data-kuesioner-kng.firebasestorage.app",
+            messagingSenderId: "399858675905",
+            appId: "1:399858675905:web:c15a66058333e2f6876440",
+            measurementId: "G-HQHFE48ECP"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        let dataForm = {};
+        let halamanSekarang = 1;
+        const totalHalaman = 8;
+
+        // Select buttons
+        const btnSebelumnya = document.getElementById('btnSebelumnya');
+        const btnSelanjutnya = document.getElementById('btnSelanjutnya');
+
+        // Function to validate email format
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Function to validate WhatsApp number (minimum 10 digits)
+        function validateWhatsApp(number) {
+            return number.length >= 10 && /^\d+$/.test(number);
+        }
+
+        // Function to validate current page
+        function validatePage(page) {
+            const konten = document.getElementById(`konten${page}`);
+            const inputs = konten.querySelectorAll("input[required], select[required]");
+            let isValid = true;
+
+            // Reset error states
+            konten.querySelectorAll('.error-message').forEach(el => el.remove());
+            konten.querySelectorAll('.border-red-500').forEach(el => el.classList.remove('border-red-500'));
+
+            inputs.forEach(input => {
+                if (input.type === 'radio' || input.type === 'checkbox') {
+                    const groupName = input.name;
+                    const group = konten.querySelectorAll(`input[name="${groupName}"]`);
+                    const isChecked = Array.from(group).some(radio => radio.checked);
+
+                    if (!isChecked) {
+                        isValid = false;
+                        // Add error message after the radio group container
+                        const container = group[0].closest('div');
+                        if (!container.querySelector('.error-message')) {
+                            const errorMsg = document.createElement('p');
+                            errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+                            errorMsg.textContent = 'Pilihan ini wajib diisi';
+                            container.appendChild(errorMsg);
+                        }
+                    }
+                } else {
+                    if (!input.value) {
+                        isValid = false;
+                        input.classList.add('border-red-500');
+                        const errorMsg = document.createElement('p');
+                        errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+                        errorMsg.textContent = 'Kolom ini wajib diisi';
+                        input.parentNode.appendChild(errorMsg);
+                    } else {
+                        // Special validation for specific fields
+                        if (input.name === 'email' && !validateEmail(input.value)) {
+                            isValid = false;
+                            input.classList.add('border-red-500');
+                            const errorMsg = document.createElement('p');
+                            errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+                            errorMsg.textContent = 'Format email tidak valid';
+                            input.parentNode.appendChild(errorMsg);
+                        }
+
+                        if (input.name === 'no_whatsapp' && !validateWhatsApp(input.value)) {
+                            isValid = false;
+                            input.classList.add('border-red-500');
+                            const errorMsg = document.createElement('p');
+                            errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+                            errorMsg.textContent = 'Nomor WhatsApp minimal 10 digit angka';
+                            input.parentNode.appendChild(errorMsg);
+                        }
+
+                        if (input.name === 'usia' && (isNaN(input.value) || input.value < 10 || input.value > 100)) {
+                            isValid = false;
+                            input.classList.add('border-red-500');
+                            const errorMsg = document.createElement('p');
+                            errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+                            errorMsg.textContent = 'Usia harus antara 10-100 tahun';
+                            input.parentNode.appendChild(errorMsg);
+                        }
+                    }
+                }
+            });
+
+            return isValid;
+        }
+
+        function simpanDataHalaman(halaman) {
+            const konten = document.getElementById(`konten${halaman}`);
+            const inputs = konten.querySelectorAll("input, select, textarea");
+
+            inputs.forEach(input => {
+                if (input.name) {
+                    if (input.type === "radio" || input.type === "checkbox") {
+                        if (input.checked) {
+                            dataForm[input.name] = input.value;
+                        }
+                    } else {
+                        dataForm[input.name] = input.value;
+                    }
+                }
+            });
+
+            console.log("Data sementara:", dataForm);
+        }
+
+        function tampilkanHalaman(n) {
+            for (let i = 1; i <= totalHalaman; i++) {
+                const konten = document.getElementById(`konten${i}`);
+                if (konten) konten.classList.add("hidden");
+            }
+
+            const kontenAktif = document.getElementById(`konten${n}`);
+            if (kontenAktif) kontenAktif.classList.remove("hidden");
+
+            halamanSekarang = n;
+            updateTombolNavigasi();
+
+            // Scroll to top when changing pages
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function halamanBerikutnya() {
+            if (!validatePage(halamanSekarang)) {
+                return;
+            }
+
+            simpanDataHalaman(halamanSekarang);
+            if (halamanSekarang < totalHalaman) {
+                tampilkanHalaman(halamanSekarang + 1);
+            }
+        }
+
+        function halamanSebelumnya() {
+            if (halamanSekarang > 1) {
+                tampilkanHalaman(halamanSekarang - 1);
+            }
+        }
+
+        function updateTombolNavigasi() {
+            btnSebelumnya.style.display = halamanSekarang === 1 ? 'none' : 'inline-block';
+            btnSelanjutnya.innerText = halamanSekarang === totalHalaman ? 'Kirim' : 'Selanjutnya';
+        }
+
+        async function kirimForm() {
+            if (!validatePage(halamanSekarang)) {
+                return;
+            }
+
+            simpanDataHalaman(halamanSekarang);
+
+            const cleanedDataForm = {};
+            Object.keys(dataForm).forEach(key => {
+                if (dataForm[key] !== undefined && dataForm[key] !== null) {
+                    cleanedDataForm[key] = dataForm[key];
+                }
+            });
+
+            // Ganti teks tombol jadi loading
+            btnSelanjutnya.disabled = true;
+            btnSelanjutnya.innerHTML = `<svg class="animate-spin h-5 w-5 mr-2 inline text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+    </svg> Mengirim...`;
+
+            try {
+                await addDoc(collection(db, "kuesioner"), {
+                    ...cleanedDataForm,
+                    timestamp: serverTimestamp()
+                });
+
+                // SweetAlert2 success
+                await Swal.fire({
+                    icon: 'success',
+                    title: 'Berhasil!',
+                    text: 'Terima kasih! Data Anda telah berhasil dikirim.',
+                    confirmButtonText: 'OK'
+                });
+
+                // Reset form
+                dataForm = {};
+                document.getElementById('kuesionerForm').reset();
+                tampilkanHalaman(1);
+            } catch (error) {
+                console.error("Error:", error);
+                // SweetAlert2 error
+                await Swal.fire({
+                    icon: 'error',
+                    title: 'Gagal',
+                    text: `Terjadi kesalahan: ${error.message}`,
+                    confirmButtonText: 'Coba Lagi'
+                });
+            } finally {
+                // Kembalikan tombol ke semula
+                btnSelanjutnya.disabled = false;
+                btnSelanjutnya.innerText = 'Kirim';
+            }
+        }
+
+
+        // Attach event listeners to buttons
+        btnSebelumnya.addEventListener('click', halamanSebelumnya);
+        btnSelanjutnya.addEventListener('click', () => {
+            if (halamanSekarang === totalHalaman) {
+                kirimForm();
+            } else {
+                halamanBerikutnya();
+            }
+        });
+
+        // Add input validation on blur for specific fields
+        document.querySelector('input[name="email"]')?.addEventListener('blur', function () {
+            if (this.value && !validateEmail(this.value)) {
+                this.classList.add('border-red-500');
+                const errorMsg = document.createElement('p');
+                errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+                errorMsg.textContent = 'Format email tidak valid';
+                this.parentNode.appendChild(errorMsg);
+            }
+        });
+
+        document.querySelector('input[name="no_whatsapp"]')?.addEventListener('blur', function () {
+            if (this.value && !validateWhatsApp(this.value)) {
+                this.classList.add('border-red-500');
+                const errorMsg = document.createElement('p');
+                errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+                errorMsg.textContent = 'Nomor WhatsApp minimal 10 digit angka';
+                this.parentNode.appendChild(errorMsg);
+            }
+        });
+
+        document.querySelector('input[name="usia"]')?.addEventListener('blur', function () {
+            if (this.value && (isNaN(this.value) || this.value < 10 || this.value > 100)) {
+                this.classList.add('border-red-500');
+                const errorMsg = document.createElement('p');
+                errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+                errorMsg.textContent = 'Usia harus antara 10-100 tahun';
+                this.parentNode.appendChild(errorMsg);
+            }
+        });
+
+        // Initialize the form
+        window.onload = () => tampilkanHalaman(1);
+    </script>
+
+</body>
+
+</html>
